@@ -125,6 +125,7 @@ lora-gas-leak-alert-system/
 └── performance_analysis.md
 
 🔮 Future Scope
+
 Multiple gas sensors (LPG, CH₄, CO, combustible gases)
 
 Sensor calibration, temperature compensation & drift correction
@@ -144,14 +145,19 @@ Multi-node LoRa network with centralized gateway monitoring
 Antenna & LoRa parameter optimization for extended range
 
 👥 Team
+
 Name	Roll No.
 G. Srujith Reddy	2411EC010073
 K. Manorahul	2411EC010106
 K. Bhanuprakash Reddy	2411EC010120
 M. Shivagopi	2411EC010122
+
+
 Guide: Dr. Ome Nerella, Assistant Professor, Dept. of ECE
 
 📚 References
+
+
 Hanwei Electronics — MQ-2 Semiconductor Sensor Datasheet
 
 Espressif Systems — ESP32 Technical Reference Manual
