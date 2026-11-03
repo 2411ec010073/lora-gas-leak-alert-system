@@ -1,0 +1,37 @@
+#include "LoRa.h"
+
+#define LORA_NSS   8
+#define LORA_RESET 12
+#define LORA_DIO1  14
+
+int counter = 0;
+
+void setup() {
+  Serial.begin(115200);
+
+  LoRa.setPins(LORA_NSS, LORA_RESET, LORA_DIO1);
+
+  if (!LoRa.begin(866E6)) {
+    Serial.println("LoRa initialization failed!");
+    while (1);
+  }
+
+  LoRa.setSpreadingFactor(7);
+  LoRa.setSignalBandwidth(125E3);
+  LoRa.setCodingRate4(5);
+
+  Serial.println("Sender Ready");
+}
+
+void loop() {
+  Serial.print("Sending: Hello ");
+  Serial.println(counter);
+
+  LoRa.beginPacket();
+  LoRa.print("Hello ");
+  LoRa.print(counter);
+  LoRa.endPacket();
+
+  counter++;
+  delay(3000);
+}
